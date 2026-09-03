@@ -42,6 +42,21 @@ brokkr run --recipe fast --repo . --feature "add one visible improvement" && bro
 
 The [quickstart](https://github.com/feedback-loop-ai/brokkr/blob/main/docs/guides/quickstart.md) takes it from install to a shipped run in sixty seconds; the [decision record](https://github.com/feedback-loop-ai/brokkr/tree/main/docs/decisions) is where the engine's rules come from and why. To give an agent hands on your own infrastructure instead, start from one of the MCP servers: each is a small TypeScript project that maps one API onto tools, and the pattern transfers.
 
+## What we believe
+
+A feedback loop is only as honest as the principles it runs on. These are ours — each one is a constraint on what we build, not a slogan.
+
+- **Open source, permissively.** What we publish, you can use, ship, fork, and outgrow. Software that closes a loop for you should never be the thing that locks you in.
+- **Vendor agnostic.** Which model, which cloud, which identity store is a parameter of the loop, not its foundation. Brokkr drives `claude`, `codex`, or `dsh` through the same recipe — an Anthropic, an OpenAI, or a DeepSeek/Qwen model, one line apart; an MCP server maps an API, whoever the agent behind the tool call is. When a vendor changes its terms, you change a line, not a system.
+- **Open data.** The journal a run produces, the evidence a release carries, the numbers a decision rests on — documented formats, readable without our tools, yours to publish. Data you can't take with you isn't yours.
+- **Transparency.** Decisions are written down with their reasons, numbered, and kept — including the ones that turned out wrong. The reasoning is public even when the code is the smaller part.
+- **Provenance.** Every artefact says where it came from: a release is attested and checksummed, a pull request names the run that produced it, a result names the ruling it rests on. If you can't trace it, you can't trust it — and neither can we.
+- **Deterministic over stochastic.** Models are stochastic and that's fine — inside a machine that is not. The state machine, the verifier, the record, the release: those are deterministic, replayable, and the same on the second run as the first. Probability belongs in the leaves, never in the trunk.
+- **Critical thinking.** A model's output is a claim, not a result. Claims get verified by something that cannot be persuaded; numbers get reconciled before they're quoted; a confident answer earns the same scrutiny as a hesitant one.
+- **Fairness.** Credit, cost, and blame attach to the work that was actually done, by whoever — or whatever — did it, measured the same way each time. No hidden subsidies, no unpriced labour, no laundering a stochastic guess into a deterministic-looking fact.
+- **Neutrality.** We do not prefer a technology because of where it comes from. A model from Hangzhou gets the same seat, the same charter, and the same scrutiny as one from San Francisco; a cloud in Paris is as first-class as one in Virginia. The pieces already say so — `dsh` beside `claude` in the engine, Scaleway and Ory as the first hands. Neutral today, and built to stay neutral when it becomes inconvenient.
+- **AI, used ethically.** Agents act only within a scope a person authorised, on record, with a person keeping the final word on what ships. We build tools that make people more capable and more accountable, never tools that make accountability disappear.
+
 ## How we work
 
 - **The machine is the outer loop.** Agents are effects inside a state machine, not the other way round. Nothing an agent says is a result until the machine records it.
