@@ -26,7 +26,7 @@ Three kinds of piece so far. An **engine** runs the cycle and keeps the record. 
 
 | Project | What it is | Licence | State |
 |---|---|---|---|
-| [**brokkr**](https://github.com/feedback-loop-ai/brokkr) | **Engine.** Deterministic delivery engine for autonomous multi-agent software delivery. An event-sourced phase machine is the outermost layer; agent sessions are leaf effects inside it. Runs you can replay, releases you can prove. | MIT OR Apache-2.0 | [v0.7.0](https://github.com/feedback-loop-ai/brokkr/releases/latest) · Rust |
+| [**brokkr**](https://github.com/feedback-loop-ai/brokkr) | **Engine.** Deterministic delivery engine for autonomous multi-agent software delivery. An event-sourced phase machine is the outermost layer; agent sessions are leaf effects inside it. Runs you can replay, releases you can prove. | MIT OR Apache-2.0 | [v0.8.0](https://github.com/feedback-loop-ai/brokkr/releases/latest) · Rust |
 | [**homebrew-tap**](https://github.com/feedback-loop-ai/homebrew-tap) | **Channel.** Homebrew formulas for Brokkr, rendered from attested releases. | MIT | `brew install feedback-loop-ai/tap/brokkr` |
 | [**scoop-bucket**](https://github.com/feedback-loop-ai/scoop-bucket) | **Channel.** Scoop manifests for Brokkr, rendered from attested releases. | MIT | `scoop bucket add brokkr https://github.com/feedback-loop-ai/scoop-bucket` |
 | [**mcp-scaleway**](https://github.com/feedback-loop-ai/mcp-scaleway) | **Hands.** An MCP server for the Scaleway APIs — compute, storage, networking, an agent can reach through a tool call. | MIT | TypeScript |
