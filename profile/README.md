@@ -22,13 +22,13 @@ The record is the point. Without it the other four stages are anecdotes.
 
 ## Projects
 
-| Project | What it is | State |
-|---|---|---|
-| [**brokkr**](https://github.com/feedback-loop-ai/brokkr) | Deterministic delivery engine for autonomous multi-agent software delivery. An event-sourced phase machine is the outermost layer; agent sessions are leaf effects inside it. Runs you can replay, releases you can prove. | [v0.7.0](https://github.com/feedback-loop-ai/brokkr/releases/latest) · Rust · MIT OR Apache-2.0 |
-| [**homebrew-tap**](https://github.com/feedback-loop-ai/homebrew-tap) | Homebrew formulas for Brokkr, rendered from attested releases. | `brew install feedback-loop-ai/tap/brokkr` |
-| [**scoop-bucket**](https://github.com/feedback-loop-ai/scoop-bucket) | Scoop manifests for Brokkr, rendered from attested releases. | `scoop bucket add brokkr https://github.com/feedback-loop-ai/scoop-bucket` |
-| [**mcp-scaleway**](https://github.com/feedback-loop-ai/mcp-scaleway) | An MCP server for the Scaleway APIs — the cloud an agent can reach through a tool call. | TypeScript |
-| [**mcp-ory-kratos**](https://github.com/feedback-loop-ai/mcp-ory-kratos) | An MCP server for Ory Kratos identity — sessions, identities, recovery, through the same door. | TypeScript |
+| Project | What it is | Licence | State |
+|---|---|---|---|
+| [**brokkr**](https://github.com/feedback-loop-ai/brokkr) | Deterministic delivery engine for autonomous multi-agent software delivery. An event-sourced phase machine is the outermost layer; agent sessions are leaf effects inside it. Runs you can replay, releases you can prove. | MIT OR Apache-2.0 | [v0.7.0](https://github.com/feedback-loop-ai/brokkr/releases/latest) · Rust |
+| [**homebrew-tap**](https://github.com/feedback-loop-ai/homebrew-tap) | Homebrew formulas for Brokkr, rendered from attested releases. | MIT | `brew install feedback-loop-ai/tap/brokkr` |
+| [**scoop-bucket**](https://github.com/feedback-loop-ai/scoop-bucket) | Scoop manifests for Brokkr, rendered from attested releases. | MIT | `scoop bucket add brokkr https://github.com/feedback-loop-ai/scoop-bucket` |
+| [**mcp-scaleway**](https://github.com/feedback-loop-ai/mcp-scaleway) | An MCP server for the Scaleway APIs — the cloud an agent can reach through a tool call. | MIT | TypeScript |
+| [**mcp-ory-kratos**](https://github.com/feedback-loop-ai/mcp-ory-kratos) | An MCP server for Ory Kratos identity — sessions, identities, recovery, through the same door. | MIT | TypeScript |
 
 ## Start here
 
