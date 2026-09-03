@@ -4,7 +4,7 @@
 
 <p align="center"><strong>Feedback loops in an AI-native world — the software delivery cycle first.</strong></p>
 
-Agents can write code all day. What they cannot do on their own is close the loop: prove the work was verified, reviewed, shipped, and recorded in a form a person can replay and audit. Every project here exists to make that loop deterministic, inspectable, and provable — first for software delivery, then for whatever else a feedback loop runs through.
+Agents can write code all day. What they cannot do on their own is close the loop: prove the work was verified, reviewed, shipped, and recorded in a form a person can replay and audit. Every project here is one piece of that loop: the engine that runs the cycle, the hands an agent uses to reach real infrastructure, the channels a result ships on. Brokkr is the largest piece. It is not the only one, and the organisation is not built around it — it is built around the loop.
 
 ## The loop we mean
 
@@ -20,25 +20,27 @@ A feedback loop is not a chat with an agent. It is a cycle with stages, and a si
 
 The record is the point. Without it the other four stages are anecdotes.
 
-## Projects
+## Pieces of the loop
+
+Three kinds of piece so far. An **engine** runs the cycle and keeps the record. **Hands** are MCP servers — the way an agent acts on a cloud, an identity store, anything with an API — so the verify and ship stages touch real systems, not mocks. **Channels** carry an attested result to the machine that installs it.
 
 | Project | What it is | Licence | State |
 |---|---|---|---|
-| [**brokkr**](https://github.com/feedback-loop-ai/brokkr) | Deterministic delivery engine for autonomous multi-agent software delivery. An event-sourced phase machine is the outermost layer; agent sessions are leaf effects inside it. Runs you can replay, releases you can prove. | MIT OR Apache-2.0 | [v0.7.0](https://github.com/feedback-loop-ai/brokkr/releases/latest) · Rust |
-| [**homebrew-tap**](https://github.com/feedback-loop-ai/homebrew-tap) | Homebrew formulas for Brokkr, rendered from attested releases. | MIT | `brew install feedback-loop-ai/tap/brokkr` |
-| [**scoop-bucket**](https://github.com/feedback-loop-ai/scoop-bucket) | Scoop manifests for Brokkr, rendered from attested releases. | MIT | `scoop bucket add brokkr https://github.com/feedback-loop-ai/scoop-bucket` |
-| [**mcp-scaleway**](https://github.com/feedback-loop-ai/mcp-scaleway) | An MCP server for the Scaleway APIs — the cloud an agent can reach through a tool call. | MIT | TypeScript |
-| [**mcp-ory-kratos**](https://github.com/feedback-loop-ai/mcp-ory-kratos) | An MCP server for Ory Kratos identity — sessions, identities, recovery, through the same door. | MIT | TypeScript |
+| [**brokkr**](https://github.com/feedback-loop-ai/brokkr) | **Engine.** Deterministic delivery engine for autonomous multi-agent software delivery. An event-sourced phase machine is the outermost layer; agent sessions are leaf effects inside it. Runs you can replay, releases you can prove. | MIT OR Apache-2.0 | [v0.7.0](https://github.com/feedback-loop-ai/brokkr/releases/latest) · Rust |
+| [**homebrew-tap**](https://github.com/feedback-loop-ai/homebrew-tap) | **Channel.** Homebrew formulas for Brokkr, rendered from attested releases. | MIT | `brew install feedback-loop-ai/tap/brokkr` |
+| [**scoop-bucket**](https://github.com/feedback-loop-ai/scoop-bucket) | **Channel.** Scoop manifests for Brokkr, rendered from attested releases. | MIT | `scoop bucket add brokkr https://github.com/feedback-loop-ai/scoop-bucket` |
+| [**mcp-scaleway**](https://github.com/feedback-loop-ai/mcp-scaleway) | **Hands.** An MCP server for the Scaleway APIs — compute, storage, networking, an agent can reach through a tool call. | MIT | TypeScript |
+| [**mcp-ory-kratos**](https://github.com/feedback-loop-ai/mcp-ory-kratos) | **Hands.** An MCP server for Ory Kratos — identities, sessions, recovery, through the same door. | MIT | TypeScript |
 
 ## Start here
 
-One shell line runs a delivery through Brokkr and puts its proof on screen:
+To see a whole loop close, end to end, run one delivery through Brokkr — one shell line, and its proof on screen:
 
 ```console
 brokkr run --recipe fast --repo . --feature "add one visible improvement" && brokkr inspect --run latest
 ```
 
-The [quickstart](https://github.com/feedback-loop-ai/brokkr/blob/main/docs/guides/quickstart.md) takes it from install to a shipped run in sixty seconds; the [decision record](https://github.com/feedback-loop-ai/brokkr/tree/main/docs/decisions) is where the engine's rules come from and why.
+The [quickstart](https://github.com/feedback-loop-ai/brokkr/blob/main/docs/guides/quickstart.md) takes it from install to a shipped run in sixty seconds; the [decision record](https://github.com/feedback-loop-ai/brokkr/tree/main/docs/decisions) is where the engine's rules come from and why. To give an agent hands on your own infrastructure instead, start from one of the MCP servers: each is a small TypeScript project that maps one API onto tools, and the pattern transfers.
 
 ## How we work
 
